@@ -47,6 +47,15 @@ public class UserTests {
 
     }
 
+    @Test(priority = 3)
+    public void testPostUser3()
+    {
+        Response response = UserEndPoints.createUser(userPayload);
+        response.then().log().all();
+        Assert.assertEquals(response.getStatusCode(),200);
+
+    }
+
 
 
 
